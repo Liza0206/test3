@@ -3,70 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Здоровый образ жизни</title>
+    <title>Здоровый Образ Жизни</title>
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
             font-family: Arial, sans-serif;
-            background: url('https://source.unsplash.com/1600x900/?fitness,gym') no-repeat center center/cover;
-            color: white;
-            text-align: center;
+            background: #f4f4f4;
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.2em;
-            max-width: 600px;
-        }
-        .btn {
+        header {
             background: #28a745;
             color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: 0.3s;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
         }
-        .btn:hover {
+        nav {
+            display: flex;
+            justify-content: center;
             background: #218838;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background: #1e7e34;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
         }
         .section {
-            padding: 50px 20px;
             background: white;
-            color: black;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            border-radius: 5px;
+        }
+        footer {
+            background: #28a745;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
+    <header>
+        Здоровый Образ Жизни
+    </header>
+    <nav>
+        <a href="#about">О проекте</a>
+        <a href="#workout">Тренировки</a>
+        <a href="#nutrition">Питание</a>
+        <a href="#gallery">Галерея</a>
+    </nav>
+    
     <div class="container">
-        <h1>Живи Активно!</h1>
-        <p>Здоровый образ жизни - это ключ к долголетию и счастью. Начни тренировки и следи за питанием!</p>
-        <button class="btn" onclick="scrollToContent()">Начать</button>
+        <div id="about" class="section">
+            <h2>Почему важно вести здоровый образ жизни?</h2>
+            <p>Правильное питание и физическая активность помогают продлить жизнь, повысить уровень энергии и улучшить настроение.</p>
+        </div>
+        
+        <div id="workout" class="section">
+            <h2>Лучшие тренировки для здоровья</h2>
+            <p>Кардио, силовые тренировки и растяжка – три ключевых компонента здорового тела.</p>
+        </div>
+        
+        <div id="nutrition" class="section">
+            <h2>Основы правильного питания</h2>
+            <p>Ешьте больше фруктов, овощей и белков, избегайте фастфуда и сладких напитков.</p>
+        </div>
+        
+        <div id="gallery" class="section">
+            <h2>Галерея тренировок</h2>
+            <div class="gallery">
+                <img src="https://source.unsplash.com/200x150/?fitness" alt="Тренировка">
+                <img src="https://source.unsplash.com/200x150/?gym" alt="Спортзал">
+                <img src="https://source.unsplash.com/200x150/?running" alt="Бег">
+                <img src="https://source.unsplash.com/200x150/?yoga" alt="Йога">
+            </div>
+        </div>
     </div>
     
-    <div class="section" id="content">
-        <h2>Полезное питание</h2>
-        <p>Правильное питание - это основа здорового тела. Употребляйте больше овощей, фруктов и белков.</p>
-        <h2>Эффективные тренировки</h2>
-        <p>Физическая активность помогает оставаться в форме и улучшает самочувствие. Выберите свой любимый вид спорта!</p>
-    </div>
-    
-    <script>
-        function scrollToContent() {
-            document.getElementById("content").scrollIntoView({ behavior: "smooth" });
-        }
-    </script>
+    <footer>
+        &copy; 2025 Здоровый Образ Жизни | Все права защищены
+    </footer>
 </body>
 </html>
